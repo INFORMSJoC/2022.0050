@@ -1,32 +1,41 @@
+[![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
 
-## Descriptions
+# Learning Symbolic Expressions: Mixed-Integer Formulations, Cuts, and Heuristics,
 
-This repository contains MINLP-based symbolic regression algorithms in Julia. 
+This archive is distributed in association with the [INFORMS Journal on
+Computing](https://pubsonline.informs.org/journal/ijoc) under the [GNU GPLv3](LICENSE).
 
-## Reference
+The software and data in this repository are a snapshot of the software and data
+that were used in the research reported on in the paper 
+[Learning Symbolic Expressions: Mixed-Integer Formulations, Cuts, and Heuristics](https://doi.org/10.1287/ijoc.2022.0050) by Jongeun Kim, Sven Leyffer, Prasanna Balaprakash.
+The snapshot is based on 
+[this SHA](https://github.com/tkralphs/JoCTemplate/commit/f7f30c63adbcb0811e5a133e1def696b74f3ba15) 
+in the development repository. 
 
-Jongeun Kim, Sven Leyffer, Prasanna Balaprakash, Learning Symbolic Expressions: Mixed-Integer Formulations, Cuts, and Heuristics, https://arxiv.org/abs/2102.08351.
+## Cite
 
-<!-- ## Cite -->
+To cite the contents of this repository, please cite both the paper and this repo, using their respective DOIs.
 
-<!-- To cite the contents of this repository, please cite both the paper and this repo, using their respective DOIs. -->
+https://doi.org/10.1287/ijoc.2022.0050
 
-<!-- https://doi.org/10.1287/ijoc.2019.0000 -->
+https://doi.org/10.1287/ijoc.2022.0050.cd
 
-<!-- https://doi.org/10.1287/ijoc.2019.0000.cd -->
+Below is the BibTex for citing this snapshot of the respoitory.
 
-<!-- Below is the BibTex for citing this snapshot of the respoitory. -->
-
-<!-- ```
-@article{SymbolicMip,
-  author =        {Jongeun Kim, Sven Leyffer, Prasanna Balaprakash},
+```
+@article{Goyal2023decision,
+  author =        { Kim, Jongeun and Leyffer, Sven and Balaprakash, Prasanna },
   publisher =     {INFORMS Journal on Computing},
-  title =         {Learning Symbolic Expresssions: Mixed-Integer Formulations, Cuts, and Heuristics - GitHub Repository},
+  title =         {{Learning Symbolic Expressions: Mixed-Integer Formulations, Cuts, and Heuristics}},
   year =          {2023},
-  doi =           {},
-  url =           {https://github.com/INFORMSJoC/2022.0050},
+  doi =           {10.1287/ijoc.2019.2022.0168.cd},
+  note =          {Available for download at https://github.com/INFORMSJoC/2022.0168},
 }  
-``` -->
+```
+
+## Content
+
+This repository contains MINLP-based symbolic regression algorithms in Julia, as well as the associated datasets.
 
 ## Install
 
