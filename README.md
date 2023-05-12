@@ -28,8 +28,8 @@ Below is the BibTex for citing this snapshot of the respoitory.
   publisher =     {INFORMS Journal on Computing},
   title =         {{Learning Symbolic Expressions: Mixed-Integer Formulations, Cuts, and Heuristics}},
   year =          {2023},
-  doi =           {10.1287/ijoc.2019.2022.0168.cd},
-  note =          {Available for download at https://github.com/INFORMSJoC/2022.0168},
+  doi =           {10.1287/ijoc.2019.2022.0050.cd},
+  note =          {Available for download at https://github.com/INFORMSJoC/2022.0050},
 }  
 ```
 
