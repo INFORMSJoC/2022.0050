@@ -1,106 +1,61 @@
-[![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
 
-# CacheTest
+## Descriptions
 
-This archive is distributed in association with the [INFORMS Journal on
-Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
+This repository contains MINLP-based symbolic regression algorithms in Julia. 
 
-The software and data in this repository are a snapshot of the software and data
-that were used in the research reported on in the paper 
-[This is a Template](https://doi.org/10.1287/ijoc.2019.0000) by T. Ralphs. 
-The snapshot is based on 
-[this SHA](https://github.com/tkralphs/JoCTemplate/commit/f7f30c63adbcb0811e5a133e1def696b74f3ba15) 
-in the development repository. 
+## Reference
 
-**Important: This code is being developed on an on-going basis at 
-https://github.com/tkralphs/JoCTemplate. Please go there if you would like to
-get a more recent version or would like support**
+Jongeun Kim, Sven Leyffer, Prasanna Balaprakash, Learning Symbolic Expressions: Mixed-Integer Formulations, Cuts, and Heuristics, https://arxiv.org/abs/2102.08351.
 
-## Cite
+<!-- ## Cite -->
 
-To cite the contents of this repository, please cite both the paper and this repo, using their respective DOIs.
+<!-- To cite the contents of this repository, please cite both the paper and this repo, using their respective DOIs. -->
 
-https://doi.org/10.1287/ijoc.2019.0000
+<!-- https://doi.org/10.1287/ijoc.2019.0000 -->
 
-https://doi.org/10.1287/ijoc.2019.0000.cd
+<!-- https://doi.org/10.1287/ijoc.2019.0000.cd -->
 
-Below is the BibTex for citing this snapshot of the respoitory.
+<!-- Below is the BibTex for citing this snapshot of the respoitory. -->
 
-```
-@article{CacheTest,
-  author =        {T. Ralphs},
+<!-- ```
+@article{SymbolicMip,
+  author =        {Jongeun Kim, Sven Leyffer, Prasanna Balaprakash},
   publisher =     {INFORMS Journal on Computing},
-  title =         {{CacheTest}},
-  year =          {2020},
-  doi =           {10.1287/ijoc.2019.0000.cd},
-  url =           {https://github.com/INFORMSJoC/2019.0000},
+  title =         {Learning Symbolic Expresssions: Mixed-Integer Formulations, Cuts, and Heuristics - GitHub Repository},
+  year =          {2023},
+  doi =           {},
+  url =           {https://github.com/INFORMSJoC/2022.0050},
 }  
-```
+``` -->
 
-## Description
+## Install
 
-The goal of this software is to demonstrate the effect of cache optimization.
+The below instruction guides you how to install the requirements and run the code.
 
-## Building
+Install Julia. Available at [Julia Download](https://julialang.org/downloads/). This code is compatible with Julia 1.5.3.
 
-In Linux, to build the version that multiplies all elements of a vector by a
-constant (used to obtain the results in [Figure 1](results/mult-test.png) in the
-paper), stepping K elements at a time, execute the following commands.
+Install SCIPOptSuite. Available at [SCIPOptSuite Download](https://www.scipopt.org/index.php#download). 
+Before you download, please check which version is supported by the SCIP package in Julia [SCIP.jl News](https://github.com/scipopt/SCIP.jl/blob/master/NEWS.md).
+The most recent version SCIP v.7.0.2 is supported (confirmed on 02/04/2021).
 
-```
-make mult
-```
+Execute `install_pkgs.jl` to install the required julia packages.
 
-Alternatively, to build the version that sums the elements of a vector (used
-to obtain the results [Figure 2](results/sum-test.png) in the paper), stepping K
-elements at a time, do the following.
+## Running an example
 
-```
-make clean
-make sum
-```
+`scripts/example/data.txt` is a sample dataset. The formula is x1*x2+1. Each row represents a data point. The code assumes that the last column is the dependent varaible.
 
-Be sure to make clean before building a different version of the code.
+`scripts/main_example.jl` is an example code to run MINLP and STreCH. 
 
-## Results
+Once MINLP or STreCH is finished, it will create `df_sol.csv`, which includes the list of formulas and their objective values (MSE).
 
-Figure 1 in the paper shows the results of the multiplication test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
+## Dataset used in the paper
 
-![Figure 1](results/mult-test.png)
+`data/` contains all the datasets used in the paper. Each folder in `data/` includes a info file `info.txt`, two training set with/without noise, one validation set, and one testing set.
 
-Figure 2 in the paper shows the results of the sum test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
 
-![Figure 1](results/sum-test.png)
+********************************************************************************
 
-## Replicating
-
-To replicate the results in [Figure 1](results/mult-test), do either
-
-```
-make mult-test
-```
-or
-```
-python test.py mult
-```
-To replicate the results in [Figure 2](results/sum-test), do either
-
-```
-make sum-test
-```
-or
-```
-python test.py sum
-```
-
-## Ongoing Development
-
-This code is being developed on an on-going basis at the author's
-[Github site](https://github.com/tkralphs/JoCTemplate).
-
-## Support
-
-For support in using this software, submit an
-[issue](https://github.com/tkralphs/JoCTemplate/issues/new).
+Notice: This software was developed in the course of or under prime
+contract No. DE-AC02-06CH11357 between the U.S.
+Department of Energy and UChicago Argonne, LLC.
+This source code is licensed under the BSD-style license found in the `LICENSE` file in the root directory of this source tree.  
