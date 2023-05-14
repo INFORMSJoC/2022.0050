@@ -23,12 +23,12 @@ https://doi.org/10.1287/ijoc.2022.0050.cd
 Below is the BibTex for citing this snapshot of the respoitory.
 
 ```
-@article{Goyal2023decision,
+@article{kim2023symbolic,
   author =        { Kim, Jongeun and Leyffer, Sven and Balaprakash, Prasanna },
   publisher =     {INFORMS Journal on Computing},
   title =         {{Learning Symbolic Expressions: Mixed-Integer Formulations, Cuts, and Heuristics}},
   year =          {2023},
-  doi =           {10.1287/ijoc.2019.2022.0050.cd},
+  doi =           {10.1287/ijoc.2022.0050.cd},
   note =          {Available for download at https://github.com/INFORMSJoC/2022.0050},
 }  
 ```
